@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
+
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -16,6 +18,7 @@ import lombok.experimental.Accessors;
  * @author Kongql
  * @since 2021-11-01
  */
+@Builder
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
@@ -27,7 +30,7 @@ public class TbRemindTime implements Serializable {
      * 提醒时间数据id
      */
     @TableId(value = "time_id", type = IdType.ID_WORKER_STR)
-    private String timeId;
+    private Long timeId;
 
     /**
      * 提醒时间
@@ -42,7 +45,7 @@ public class TbRemindTime implements Serializable {
     /**
      * 对应提醒条目id
      */
-    private String remindItemId;
+    private Long remindItemId;
 
 
 }

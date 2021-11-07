@@ -2,6 +2,7 @@ package com.remindme.medicine.remindtime.mapper;
 
 import com.remindme.medicine.remindtime.entity.TbRemindTime;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author Kongql
  * @since 2021-11-01
  */
+@Mapper
 public interface TbRemindTimeMapper extends BaseMapper<TbRemindTime> {
 
 }

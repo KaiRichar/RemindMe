@@ -12,5 +12,4 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-11-01
  */
 public interface TbMedicineInfoService extends IService<TbMedicineInfo> {
-
 }

@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
+
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -16,6 +18,7 @@ import lombok.experimental.Accessors;
  * @author Kongql
  * @since 2021-11-01
  */
+@Builder
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
@@ -27,7 +30,7 @@ public class TbMedicineInfo implements Serializable {
      * 药物数据id
      */
     @TableId(value = "medicine_id", type = IdType.ID_WORKER_STR)
-    private String medicineId;
+    private Long medicineId;
 
     /**
      * 药物名称
@@ -42,7 +45,7 @@ public class TbMedicineInfo implements Serializable {
     /**
      * 所属任务id
      */
-    private String taskId;
+    private Long taskId;
 
     /**
      * 数据生成时间
